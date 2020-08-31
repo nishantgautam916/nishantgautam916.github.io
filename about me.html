@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+background-image: url("background.jfif") ;
+background-repeat: no-repeat;
+background-size:cover;
+                     
+            }
+            nav {
+              border: 4px solid black;
+    padding: 23px;
+    background-color: #97a2e0;
+    border-radius: 17px;
+    margin-left: -3px;
+            }
+            .home li      {
+    font-style: normal;
+    font-size: large;
+    list-style-type: none;
+    border: 4px solid black;
+    background-color: coral;
+    width: 45px;
+    height: 28px;
+    margin-left: 36px;
+    padding: 0px 23px;
+    float: left;
+    border-radius: 23px;
+    margin-top: 14px;
+    padding-top: 7px;
+}
+            a:active{
+               background-color:brown;
+               
+             }
+             a:hover{
+                 background-color: azure;
+             }
+             a {
+                 text-decoration: none;
+             }                         
+                                      
+                   
+           .others li {
+            font-style: normal;
+               font-size: large;
+               list-style-type: none;
+               display: inline;
+               float: right;
+               border: 4px solid black;
+               background-color: coral;
+               margin-top:-23px;
+               padding: 0px 23px;
+               margin-right: 240px;
+               text-decoration: none;
+               border-radius: 23px;
+               margin-bottom: 23px;
+              
+           }
+           .context {
+               float: right;
+               margin-top: 100px;
+               
+               margin-right:1100px;
+               font-size:x-large;
+               border: 2px solid black;
+               padding:23px;
+           }
+           .back img{
+            height: 34px;
+    width: 32px;
+    margin: -55px 8px 11px 11px;
+    padding: 0px;
+    border: 5px solid rgb(174 174 255);
+    border-radius: 24px;
+    display: inline;
+    float: left;
+                                                
+                    }
+                     
+               </style>
+               <script>
+                function goBack() {
+                  window.history.back()
+                }
+                </script>
+</head>
+<body>
+    <div class="home">
+        
+          <ul>
+              <li><a href="welcome page.html">Home</a></li>
+          </ul>
+              
+        
+          </div>
+        
+     <div class="others">
+         <nav>
+         <ul>
+       <li><a href="FirstGoHerePage.html">Link 1</a></li>
+      <li><a href="SecondGoHerePage.html">Link 2</a></li>
+      <li><a href="about me.html">About me</a></li>
+        </ul> 
+       </nav>
+      </div>
+      <div class="back">
+        <img  src="back.png" onclick="goBack()" >
+      </div>
+      <div class=context id="context">
+          <p>My name is Nishant Gautam</p>
+
+  
+  </div>
+</body>
+</html>
