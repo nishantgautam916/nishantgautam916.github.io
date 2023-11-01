@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .car-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .car-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .car-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain; /* Ensure proper image fitting */
+        }
+
+        .rent-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Rent Cars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cars.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="car-grid">
+        <div class="car-card">
+            <h2>Car Model 1</h2>
+            <div id="carCarousel1" class="carousel slide car-images" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block car-image" src="car1_1.jpg" alt="Car 1 - Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block car-image" src="car1_2.jfif" alt="Car 1 - Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block car-image" src="car1_3.jpg" alt="Car 1 - Image 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carCarousel1" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carCarousel1" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+            <form action="login.html">
+                <input type="radio" id="days" name="select" value="1day" required>
+                <label for="days">rent for 1 day</label><br>
+                <input type="radio" id="days" name="select" value="3days" required>
+                <label for="days">rent for 3 days</label><br>
+                <input type="radio" id="days" name="select" value="5days" required>
+                <label for="days">rent for 5 days</label><br>
+                <label for="date">start date:</label><br>
+                <input type="number" id="date" value="date" required><br><br>
+                <label for="date"></label>
+                <button class="rent-button" type="submit" value="submit">Rent</button>
+            </form>
+        </div><br><br>
+
+        <div class="car-card">
+            <h2>Car Model 2</h2>
+            <div id="carCarousel2" class="carousel slide car-images" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block car-image" src="action-asphalt-auto-210019.jpg" alt="Car 2 - Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block car-image" src="OIP (1).jfif" alt="Car 2 - Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block car-image" src="OIP.jfif" alt="Car 2 - Image 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carCarousel2" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class "carousel-control-next" href="#carCarousel2" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+            <form action="login.html">
+                <input type="radio" id="days" name="select" value="1day" required>
+                <label for="days">rent for 1 day</label><br>
+                <input type="radio" id="days" name="select" value="3days" required>
+                <label for="days">rent for 3 days</label><br>
+                <input type="radio" id="days" name="select" value="5days" required>
+                <label for="days">rent for 5 days</label><br>
+                <label for="date">start date:</label><br>
+                <input type="number" id="date" value="date" required><br><br>
+                <label for="date"></label>
+                <button class="rent-button" type="submit" value="submit">Rent</button>
+            </form>
+        </div><br><br>
+        <div class="car-card">
+            <h2>Car Model 3</h2>
+            <div id="carCarousel3" class="carousel slide car-images" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block car-image" src="pngtree-black-audi-sports-car-sitting-in-a-dark-garage-picture-image_2664408.jpg"
+                            alt="Car 3 - Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block car-image" src="R.jfif" alt="Car 3 - Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block car-image" src="AUDI_R8_1-1440.jpg" alt="Car 3 - Image 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carCarousel3" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#carCarousel3" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+            <form action="login.html">
+                <input type="radio" id="days" name="select" value="1day" required>
+                <label for="days">rent for 1 day</label><br>
+                <input type="radio" id="days" name="select" value="3days" required>
+                <label for="days">rent for 3 days</label><br>
+                <input type="radio" id="days" name="select" value="5days" required>
+                <label for="days">rent for 5 days</label><br>
+                <label for="date">start date:</label><br>
+                <input type="number" id="date" value="date" required><br><br>
+                <label for="date"></label>
+                <button class="rent-button" type="submit" value="submit">Rent</button>
+            </form>
+        </div><br><br>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
