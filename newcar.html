@@ -1,13 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a Car</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3498db; /* Blue color for the heading */
+        }
+
+        form {
+            background-color: #ffffff; /* White background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label,
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: 1px solid #dcdcdc; /* Light gray border for form controls */
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #e74c3c; /* Red color for the submit button */
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b; /* Darker red color on hover */
+        }
+
+        .btn-secondary {
+            margin-top: 20px;
+            background-color: #2ecc71; /* Green color for the secondary button */
+            border: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-secondary:hover {
+            background-color: #27ae60; /* Darker green color on hover */
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center">Add Cars</h1>
-        <form action="newcar.php" method="post" class="col-md-6 offset-md-3">
+    <div class="container">
+        <h1>Add Cars</h1>
+        <form action="newcar.php" method="post" class="col-md-6 offset-md-3" id="carForm">
             <div class="mb-3">
                 <label for="model" class="form-label">Enter Model Name:</label>
                 <input type="text" id="model" name="model" class="form-control" required>
@@ -20,7 +90,7 @@
 
             <div class="mb-3">
                 <label for="seats" class="form-label">Enter Seating Capacity:</label>
-                <input type="number" id="seats" name = "seats" class="form-control" required>
+                <input type="number" id="seats" name="seats" class="form-control" required>
             </div>
 
             <div class="mb-3">
@@ -30,10 +100,21 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <div class="confirmation-message" id="confirmationMessage">
+            Car added successfully!
+        </div>
         <div class="text-center mt-3">
             <a href="database.php" class="btn btn-secondary">Check Car Details</a>
         </div>
     </div>
+
+    <script>
+        document.getElementById('carForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+            // Display confirmation message
+            document.getElementById('confirmationMessage').style.display = 'block';
+            // You can add additional logic here, like sending the form data via AJAX
+        });
+    </script>
 </body>
 </html>
-

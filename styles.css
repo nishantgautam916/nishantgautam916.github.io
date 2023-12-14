@@ -1,22 +1,108 @@
+/* styles.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
-h1 {
-    margin: 0;
+    background-color: #f0f0f0; /* Set a light gray background color */
+    font-family: 'Arial', sans-serif;
 }
 
 #content {
+    text-align: center;
+}
+
+.btn {
+    margin: 5px;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.header {
+    background-color: #343a40;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Center the buttons horizontally and add some styling */
+.btn-primary,
+.btn-success {
+    display: inline-block;
     margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, border 0.3s;
+}
+
+.btn-primary {
+    background-color: #e74c3c; /* Alizarin Red */
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #2ecc71; /* Emerald Green */
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-success:hover {
+    background-color: #c0392b; /* Pomegranate Red */
+    color: #fff;
+    transform: scale(1.1);
+    border-color: #c0392b;
+}
+
+/* Add some spacing and styling to h2 */
+#content h2 {
+    margin-top: 20px;
+    color: #343a40;
+}
+
+/* Add styling to links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Add a subtle background color change on hover for the whole page */
+body:hover {
+    background-color: #eaeaea; /* Lighter gray on hover */
+}
+
+/* Add a more pronounced textured effect with linear gradients */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #f1f1f1 25%, transparent 25%, transparent 75%, #f1f1f1 75%, #f1f1f1),
+                linear-gradient(-45deg, #f1f1f1 25%, transparent 25%, transparent 75%, #f1f1f1 75%, #f1f1f1);
+    background-size: 20px 20px;
+    opacity: 0.1;
+    pointer-events: none;
 }

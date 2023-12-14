@@ -1,2 +1,3 @@
-Options +FollowSymLinks
-
+<RequireAny>
+    Require method GET POST
+</RequireAny>
